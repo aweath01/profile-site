@@ -1,7 +1,7 @@
 <template>
    <div id='wrapper'>
       <div id='picture'>
-         <img src='../../public/profile-pic.jpg'>
+         <img src='../assets/profile-pic.jpg'>
       </div>
       <div id='profile'>
          <h1>Alexandra Weatherall</h1>
@@ -24,8 +24,8 @@
             </ul>
          </p>
          <div id='linx'>
-            <span> <strong> <a href='mailto:aweath01@gmail.com'>Contact Me</a> </strong> </span>
-            <span> <strong> <a href='github.com'>Source Code on GitHub</a> </strong> </span>
+            <span> <strong> <a href='mailto:aweath01@gmail.com' target="_blank">Contact Me</a> </strong> </span>
+            <span> <strong> <a href='https://www.github.com/aweath01' target="_blank">Source Code on GitHub</a> </strong> </span>
          </div>
       </div>
    </div>
@@ -33,6 +33,7 @@
 
 <script>
 export default {
+   name: 'Profile'
 }
 </script>
 
