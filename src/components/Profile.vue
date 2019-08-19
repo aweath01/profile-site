@@ -1,5 +1,5 @@
 <template>
-   <div id='wrapper'>
+   <div id='profile-wrapper'>
       <div id='picture'>
          <img src='../assets/profile-pic.jpg'>
       </div>
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style scoped>
-#wrapper{
+#profile-wrapper{
    margin-top: 100px;
    margin-left: 180px; 
    margin-right: 180px; 

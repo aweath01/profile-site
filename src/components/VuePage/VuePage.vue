@@ -1,29 +1,17 @@
 <template>
    <div id="vue-page">
-      <div id="app">
-         <nav id = "nav">
-               <nav-bar/>
-         </nav>
-
-         <div id = "team-box">
-               <team-box />  
-         </div>
+      <nav id = "nav">
+            <nav-bar/>
+      </nav>
+      <div id = "team-box">
+            <team-box />  
       </div>
    </div>
 </template>
 
 <style>
-html,
-body,
-main {
-  height: 100%;
-  max-height: 100%;
-  margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  background-color: darkslategrey;
-}
 
-#app {
+#vue-page {
   height: 100%;
   overflow: auto;
 }
@@ -41,7 +29,7 @@ main {
 }
 
 @media screen and (max-width: 400px) {
-  #app {
+  #vue-page {
     flex-direction: column;
   }
 }

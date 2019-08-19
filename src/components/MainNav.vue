@@ -2,7 +2,7 @@
   <div id='nav'>
     <div id='home'><routerLink to='/home'><strong><i class="fas fa-home"></i></strong></routerLink></div>
     <div id='tech'><routerLink to='/vue'><strong>Vue</strong></routerLink></div>
-    <div id='tech'><routerLink to='/'><strong>React</strong></routerLink></div>
+    <div id='tech'><routerLink to='/react'><strong>React</strong></routerLink></div>
     <div id='tech'><routerLink to='/'><strong>Angular</strong></routerLink></div>
     <div id='tech'><routerLink to='/'><strong>Node</strong></routerLink></div>
     <div id='contact'><a href='mailto:aweath01@gmail.com'><strong>Contact</strong></a></div>

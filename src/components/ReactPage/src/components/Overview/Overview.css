@@ -1,0 +1,22 @@
+#main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+#sidebar{
+    flex: 1;
+}
+
+.nav-link{
+    color: #000;
+}
+
+.nav-link.active{
+    background: #a78790;
+}
+
+#content{
+    flex: 7;
+}
