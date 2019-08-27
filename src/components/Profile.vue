@@ -1,7 +1,7 @@
 <template>
    <div id='profile-wrapper'>
       <div id='picture'>
-         <img src='../assets/profile-pic.jpg'>
+         <img src='../assets/profile-pic.jpg' id="photo">
       </div>
       <div id='profile'>
          <h1>Alexandra Weatherall</h1>
@@ -39,26 +39,44 @@ export default {
 
 <style scoped>
 #profile-wrapper{
-   margin-top: 100px;
-   margin-left: 180px; 
-   margin-right: 180px; 
+   margin-top: 10%;
+   margin-left: 17%; 
+   margin-right: 17%; 
    display: flex;
    flex-direction: row;
 }
 #picture{
    flex: 1;
 }
+
 #profile{
    flex: 5;
    border-width: 3px;
    border-style: solid;
    border-color: forestgreen;
-   opacity: 50%;
-   padding: 10px;
+   padding: 4%;
+   vertical-align: middle;
 }
 #linx{
    display: flex;
-   justify-content: space-evenly
+   justify-content:space-around;
+}
+
+span{
+   flex: 1;
+   text-align: center;
+}
+@media screen and (max-width: 600px) {
+  #profile-wrapper {
+   flex-direction: column;
+  }
+  #photo{
+   padding-top: 0%;
+   padding-bottom: 0%;
+   max-width: 100%;
+   object-fit: contain;
+
+}
 }
 
 

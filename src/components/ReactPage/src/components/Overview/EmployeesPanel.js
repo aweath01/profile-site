@@ -57,7 +57,9 @@ class EmployeesPanel extends React.Component {
                         <th>Position</th>
                         </tr>
                     </thead>
-                    <EmployeeRow employees={this.state.employees}/>
+                    <tbody>
+                      <EmployeeRow employees={this.state.employees}/>
+                    </tbody>
                 </Table>
             </Card.Body>
             <Card.Footer>

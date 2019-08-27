@@ -58,7 +58,9 @@ class ProjectsPanel extends React.Component {
                         <th>Active # Days</th>
                         </tr>
                     </thead>
-                    <ProjectRow projects={this.state.projects}/>
+                    <tbody>
+                      <ProjectRow projects={this.state.projects}/>
+                    </tbody>
                 </Table>
             </Card.Body>
             <Card.Footer>

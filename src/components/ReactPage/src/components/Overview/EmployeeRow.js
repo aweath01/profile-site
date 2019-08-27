@@ -4,7 +4,7 @@ function EmployeeRow(props){
     return(
         
         props.employees.map(employee =>
-            <tr>
+            <tr key={employee._id}>
                 <td> {employee.FirstName} {employee.LastName} </td>
                 <td> {employee.Position.PositionName} </td> 
             </tr>

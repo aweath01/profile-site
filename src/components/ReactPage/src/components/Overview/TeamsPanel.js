@@ -57,7 +57,9 @@ class TeamsPanel extends React.Component {
                         <th># Employees</th>
                         </tr>
                     </thead>
-                    <TeamRow teams={this.state.teams}/>
+                    <tbody>
+                      <TeamRow teams={this.state.teams}/>
+                    </tbody>
                 </Table>
             </Card.Body>
             <Card.Footer>

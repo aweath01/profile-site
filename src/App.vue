@@ -34,10 +34,4 @@ body{
   -moz-osx-font-smoothing: grayscale;
 
 }
-
-@media screen and (max-width: 400px) {
-  #app {
-    flex-direction: column;
-  }
-}
 </style>
