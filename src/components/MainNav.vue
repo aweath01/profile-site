@@ -3,8 +3,8 @@
     <div id='home'><routerLink to='/home'><strong><i class="fas fa-home"></i></strong></routerLink></div>
     <div id='tech'><routerLink to='/vue'><strong>Vue</strong></routerLink></div>
     <div id='tech'><routerLink to='/react'><strong>React</strong></routerLink></div>
-    <div id='tech'><a href="https://fathomless-thicket-65337.herokuapp.com" target="_blank"><strong>Angular</strong></a></div>
-    <div id='tech'><routerLink to='/'><strong>Node</strong></routerLink></div>
+    <div id='tech'><a href="https://fathomless-thicket-65337.herokuapp.com" target="_blank"><strong>Angular <i class="fas fa-external-link-alt fa-xs" id="tiny"></i></strong></a></div>
+    <!--<div id='tech'><routerLink to='/'><strong>Node</strong></routerLink></div> -->
     <div id='contact'><a href='mailto:aweath01@gmail.com'><strong><i class="fas fa-envelope"></i></strong></a></div>
   </div>  
 </template>
@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: forestgreen;
+  background-color: #51A3A3;
   text-align: center;
   
 }
@@ -35,6 +35,9 @@ a{
 #tech{
   flex: 2;
   padding: 10px;
+}
+#tiny{
+  font-size: 7pt;
 }
 
 
