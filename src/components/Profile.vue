@@ -4,8 +4,8 @@
          <img src='../assets/profile-pic.jpg' id="photo">
       </div>
       <div id='profile'>
-         <h1>Alexandra Weatherall</h1>
-         <h3>Junior Web Developer</h3>
+         <h2>Alexandra Weatherall</h2>
+         <h4>Junior Web Developer</h4>
          <h5>Education</h5>
          <p>
             <strong><a href='https://www.senecacollege.ca/programs/fulltime/CPD.html' target='_blank'>Seneca College - Computer Programming (2019)</a></strong>
@@ -51,9 +51,9 @@ export default {
 
 #profile{
    flex: 5;
-   border-width: 3px;
-   border-style: solid;
-   border-color: forestgreen;
+   border-left-width: 12px;
+   border-left-style: groove;
+   border-left-color: forestgreen;
    padding: 4%;
    vertical-align: middle;
 }
