@@ -78,6 +78,7 @@ span{
 #footer{
    text-align: center;
    font-size: 10pt;
+   color: white;
 }
 .font-change{
    font-family: 'Lexend Deca', sans-serif;

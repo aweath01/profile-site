@@ -1,6 +1,7 @@
 #eWrapper{
     display: flex;
     flex-direction: row !important;
+    background-color:gray;
 }
 
 #contentwrapper{
