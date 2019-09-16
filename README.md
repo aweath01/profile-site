@@ -14,19 +14,19 @@ The site is currently hosted on Heroku (currently working on switching it to Dig
 For this application, I created a friendly user interface to allow users to edit existing team data, from the "Teams API". This includes changing the Team Lead, the current Projects as well as the Members (Employees) of each of the 15 teams in the system. I used a card/panel-style interface for each Team’s information.
 
 Here is the general guideline given for how it should look:
-![alt text](https://github.com/aweath01/profile-site/vue-guideline.png "Vue.js Layout Guideline") 
+![Vue.js Layout Guideline](https://github.com/aweath01/profile-site/vue-guideline.png "Vue.js Layout Guideline") 
 
 
 
-### React
+## React
 
 For this application, I worked entirely in React. The application features 4 routes: Overview, Projects, Teams & Employees. Each route is responsible for rendering information from the "Teams API".
 
 Here is the general guideline given for how it should look:
-![alt text](https://github.com/aweath01/profile-site/react-guideline.png "React Layout Guideline") 
+![React Layout Guideline](https://github.com/aweath01/profile-site/react-guideline.png "React Layout Guideline") 
 
 
-### Angular
+## Angular
 
 I refactored a premium HTML Bootstrap template [influx](https://www.templategarden.com/template/influx-multi-page-bootstrap-template/),  into Angular components with routing enabled. I used Services in Angular to retreive and load information from the "Teams API" into the components. I used Template Driven Angular Forms to allow users to edit employee / position information, as well as added search/filtering to the Employees table to make it more user-friendly.
 
