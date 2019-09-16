@@ -14,7 +14,7 @@ The site is currently hosted on Heroku (currently working on switching it to Dig
 For this application, I created a friendly user interface to allow users to edit existing team data, from the "Teams API". This includes changing the Team Lead, the current Projects as well as the Members (Employees) of each of the 15 teams in the system. I used a card/panel-style interface for each Team’s information.
 
 Here is the general guideline given for how it should look:
-![Vue.js Layout Guideline](https://github.com/aweath01/profile-site/vue-guideline.png "Vue.js Layout Guideline") 
+![Vue.js Layout Guideline](https://github.com/aweath01/profile-site/blob/master/vue-guideline.png "Vue.js Layout Guideline") 
 
 
 
@@ -23,7 +23,7 @@ Here is the general guideline given for how it should look:
 For this application, I worked entirely in React. The application features 4 routes: Overview, Projects, Teams & Employees. Each route is responsible for rendering information from the "Teams API".
 
 Here is the general guideline given for how it should look:
-![React Layout Guideline](https://github.com/aweath01/profile-site/react-guideline.png "React Layout Guideline") 
+![React Layout Guideline](https://github.com/aweath01/profile-site/blob/master/react-guideline.png "React Layout Guideline") 
 
 
 ## Angular
