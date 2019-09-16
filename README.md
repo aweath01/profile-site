@@ -9,7 +9,7 @@ I decided not to use Bootstrap or any pre-made components on the main page, in o
 The site is currently hosted on Heroku (currently working on switching it to Digital Ocean), using a Node.js server I built. 
 
 
-## Vue.js
+## [Vue.js](https://github.com/aweath01/profile-site/tree/master/src/components/VuePage)
 
 For this application, I created a friendly user interface to allow users to edit existing team data, from the "Teams API". This includes changing the Team Lead, the current Projects as well as the Members (Employees) of each of the 15 teams in the system. I used a card/panel-style interface for each Team’s information.
 
@@ -18,7 +18,7 @@ Here is the general guideline given for how it should look:
 
 
 
-## React
+## [React](https://github.com/aweath01/profile-site/tree/master/src/components/ReactPage)
 
 For this application, I worked entirely in React. The application features 4 routes: Overview, Projects, Teams & Employees. Each route is responsible for rendering information from the "Teams API".
 
