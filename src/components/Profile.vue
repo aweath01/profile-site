@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class='full'>
    <div id='profile-wrapper'>
       <div class='profile photo'>
          <img src='../assets/profile-pic.jpg' id="picture">
@@ -8,26 +8,27 @@
             <h4 class="center">Junior Web Developer</h4>   
          </div>
       </div>
+      
       <div class='profile font-change experience'>
          <p>
-            <h4>Education & Experience</h4>
+            <h4 class="center">Education & Experience</h4>
             <span><a href='https://www.senecacollege.ca/programs/fulltime/CPD.html' target='_blank'><strong>Seneca College - Computer Programming (2019) </strong><i class="fas fa-external-link-alt fa-xs"></i></a></span>
-            <br/>
             <ul>
                <li>C++, JavaScript, Java, SQL, HTML, CSS, Typescript, RPGLE, CLLE</li>
                <li>Back-End Development using Node.js</li>
             </ul>
             Front-End Development
-            <ul>
-               <li><routerLink to='/vue'><strong>Vue.js</strong></routerLink></li>
-               <li><routerLink to='/react'><strong>React.js</strong></routerLink></li>
-               <li><a href="https://fathomless-thicket-65337.herokuapp.com" target="_blank"><strong>Angular <i class="fas fa-external-link-alt fa-xs"></i></strong></a></li>
-            </ul>
+            <ul><strong>
+               <li><routerLink to='/vue'>Vue.js</routerLink></li>
+               <li><routerLink to='/react'> React.js </routerLink></li>
+               <li><a href="https://fathomless-thicket-65337.herokuapp.com" target="_blank"> Angular <i class="fas fa-external-link-alt fa-xs"></i> </a></li>
+               <li><a href="https://www.drkolenich.com" target="_blank">Wordpress <i class="fas fa-external-link-alt fa-xs"></i></a></li>
+            </strong></ul>
          </p>
          <div id='linx'>
-            <span> <strong> <a href="https://www.linkedin.com/in/alexandra-weatherall/" target="_blank"><img src='../assets/LI-In-Bug.png' class='logo'></a> </strong> </span>
-            <span> <strong> <a href='https://www.github.com/aweath01/profile-site' target="_blank"><img src='../assets/GitHub-Mark-32px.png'></a> </strong> </span>
-            <span> <strong> <a href='mailto:aweath01@gmail.com' target="_blank"><i class="fas fa-envelope" id="fa-envelope"></i></a> </strong> </span>
+            <span><a href="https://www.linkedin.com/in/alexandra-weatherall/" target="_blank"><img src='../assets/LI-In-Bug.png' class='logo'></a></span>
+            <span><a href='https://www.github.com/aweath01/profile-site' target="_blank"><img src='../assets/GitHub-Mark-32px.png'></a></span>
+            <span><a href='mailto:aweath01@gmail.com' target="_blank"><i class="fas fa-envelope" id="fa-envelope"></i></a></span>
          </div>
       </div>
    </div>
@@ -45,7 +46,15 @@ export default {
 
 <style scoped>
 a{
-   color:#75485E;
+   color:rgb(114, 4, 107);
+}
+a:hover{
+   color:rgb(0, 77, 0);
+   text-decoration: none;
+}
+
+.full{
+   min-height:100%;
 }
 .center{
    text-align: center;
@@ -59,15 +68,13 @@ a{
 }
 .profile{
    flex-direction: column;
-   border-left-width: 12px;
-   border-left-style: groove;
-   border-left-color: #51A3A3;
    padding: 4%;
+   margin: 5px;
    vertical-align: middle;
-   background-color: white;
+   background-color: rgba(255, 255, 255, 0.8);
 }
 .experience{
-   flex: 2;
+   flex: 2;   
 }
 .photo{
    flex: 1;
@@ -80,10 +87,6 @@ a{
 #linx{
    display: flex;
    justify-content:space-around;
-}
-span{
-   flex: 1;
-   text-align: center;
 }
 #footer{
    text-align: center;
@@ -102,8 +105,9 @@ span{
    font-size: 20pt;
 }
 
+
 @import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   #profile-wrapper {
    flex-direction: column;
   }

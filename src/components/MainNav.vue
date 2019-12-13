@@ -15,13 +15,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: #51A3A3;
+  background-color: rgba(71, 0, 67, 0.89);
   text-align: center;
-  
 }
 
 a{
-  color: black;
+  color: white;
+}
+a:hover{
+   color:black;
+   text-decoration: none;
 }
 
 #home, #contact{

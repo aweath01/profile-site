@@ -5,7 +5,7 @@ import './NavBar.css';
 function NavBar() {
     return(
         <Navbar expand="lg">
-            <Navbar.Brand >React Example - Alexandra Weatherall 2019</Navbar.Brand>
+            <Navbar.Brand>React Example - Alexandra Weatherall 2019</Navbar.Brand>
         </Navbar>
     )
 }

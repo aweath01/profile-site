@@ -2,12 +2,16 @@
     padding: 25px;
     display: flex;
     flex-direction: column !important;
-    background-color:gray;
 }
 
 #title{
     padding-bottom: 25px;
     flex: 1;
+    color: white;
+}
+
+.white-txt{
+    color: white;
 }
 
 #content{
@@ -23,6 +27,11 @@
     padding-right: 1px;
     height: 500px;
     overflow: scroll;
+}
+
+div.card-body > a > button{
+    padding: 5px;
+    font-size: 10pt;
 }
 
 .table thead th {
