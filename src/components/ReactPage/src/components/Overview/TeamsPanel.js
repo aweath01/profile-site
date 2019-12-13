@@ -31,7 +31,7 @@ class TeamsPanel extends React.Component {
         // Are we in an error state? If so show an error message.
         if(this.state.errored) {
           return (
-            <div>
+            <div class="white-txt">
               <p>Error: unable to load team data</p>
             </div>
           );
@@ -40,7 +40,7 @@ class TeamsPanel extends React.Component {
         // If we aren't in error state, are we in a loading state?
         if(this.state.loading) {
           return (
-            <div>
+            <div class="white-txt">
               <p>Loading...</p>
             </div>
           );
@@ -50,7 +50,12 @@ class TeamsPanel extends React.Component {
             <Card>
             <Card.Body>
                 <Card.Title>Teams</Card.Title>
-                <Table striped bordered hover>
+                <Link to="/Teams">
+                <Button variant="outline-dark" size="lg" block>
+                    View All Team Data
+                </Button>
+                </Link>
+                <Table striped hover>
                     <thead>
                         <tr>
                         <th>Team Name</th>
@@ -62,13 +67,6 @@ class TeamsPanel extends React.Component {
                     </tbody>
                 </Table>
             </Card.Body>
-            <Card.Footer>
-            <Link to="/Teams">
-                <Button variant="secondary" size="lg" block>
-                    View All Team Data
-                </Button>
-            </Link>
-            </Card.Footer>
         </Card>
         );
       }

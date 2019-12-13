@@ -1,7 +1,7 @@
 #eWrapper{
     display: flex;
     flex-direction: row !important;
-    background-color:gray;
+    color: white;
 }
 
 #contentwrapper{
@@ -16,9 +16,9 @@
 }
 
 #eTitle{
-    padding-bottom: 15px;
-    padding-top: 10px;
-    padding-left: 10px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    padding-left: 25px;
     flex: 1;
 }
 

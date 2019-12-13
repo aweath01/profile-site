@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import EmployeeRow from './EmployeeRow';
 import { getEmployeeData } from '../../data';
 import {Link} from 'react-router-dom';
+import './Content.css'
 
 class EmployeesPanel extends React.Component {
     constructor(props){
@@ -31,7 +32,7 @@ class EmployeesPanel extends React.Component {
         // Are we in an error state? If so show an error message.
         if(this.state.errored) {
           return (
-            <div>
+            <div class="white-txt">
               <p>Error: unable to load employee data</p>
             </div>
           );
@@ -40,7 +41,7 @@ class EmployeesPanel extends React.Component {
         // If we aren't in error state, are we in a loading state?
         if(this.state.loading) {
           return (
-            <div>
+            <div class="white-txt">
               <p>Loading...</p>
             </div>
           );
@@ -50,7 +51,12 @@ class EmployeesPanel extends React.Component {
             <Card>
             <Card.Body>
                 <Card.Title>Employees</Card.Title>
-                <Table striped bordered hover>
+                <Link to="/Employees">
+                  <Button variant="outline-dark" size="lg" block>
+                    View All Employee Data
+                  </Button>
+                </Link>  
+                <Table striped hover id="employeespanel">
                     <thead>
                         <tr>
                         <th>Full Name</th>
@@ -62,13 +68,6 @@ class EmployeesPanel extends React.Component {
                     </tbody>
                 </Table>
             </Card.Body>
-            <Card.Footer>
-            <Link to="/Employees">
-            <Button variant="secondary" size="lg" block>
-                View All Employee Data
-            </Button>
-            </Link>    
-            </Card.Footer>
         </Card>
         );
       }

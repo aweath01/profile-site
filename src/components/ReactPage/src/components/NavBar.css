@@ -1,3 +1,7 @@
 .navbar {
-    background: #CB904D;
+    background-color: #ffffff;
+    
+}
+.navbar-brand{
+    font-size: 12pt !important;
 }

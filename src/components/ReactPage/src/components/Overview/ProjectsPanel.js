@@ -32,7 +32,7 @@ class ProjectsPanel extends React.Component {
         // Are we in an error state? If so show an error message.
         if(this.state.errored) {
           return (
-            <div>
+            <div class="white-txt">
               <p>Error: unable to load project data</p>
             </div>
           );
@@ -41,7 +41,7 @@ class ProjectsPanel extends React.Component {
         // If we aren't in error state, are we in a loading state?
         if(this.state.loading) {
           return (
-            <div>
+            <div class="white-txt">
               <p>Loading...</p>
             </div>
           );
@@ -51,7 +51,12 @@ class ProjectsPanel extends React.Component {
             <Card>
             <Card.Body>
                 <Card.Title>Projects</Card.Title>
-                <Table striped bordered hover>
+                <Link to="/Projects">
+                <Button variant="outline-dark" size="lg" block>
+                    View All Project Data
+                </Button>
+                </Link>
+                <Table striped hover>
                     <thead>
                         <tr>
                         <th>Project Name</th>
@@ -63,13 +68,6 @@ class ProjectsPanel extends React.Component {
                     </tbody>
                 </Table>
             </Card.Body>
-            <Card.Footer>
-            <Link to="/Projects">
-                <Button variant="secondary" size="lg" block>
-                    View All Project Data
-                </Button>
-            </Link>
-            </Card.Footer>
         </Card>
         );
       }
