@@ -3,7 +3,7 @@
         <form>
             <label>Team Leader</label> 
             <br/>
-            <select>
+            <select @change="handleChange()">
                 <option v-for="employee of employees" :key="employee._id" :selected="employee._id == thisLeader[0]._id"> {{employee.FirstName}} {{employee.LastName}} </option>
             </select>
             <br/><br/>
@@ -23,7 +23,7 @@
 </style>
 
 <script>
-import _ from 'lodash'
+
 import TeamMembers from './TeamMembers'
 
 export default {
@@ -37,7 +37,10 @@ export default {
     },
     components:{
         TeamMembers
-    },  
+    }, 
+    methods: {
+        
+    },
 
     created: function() {
 

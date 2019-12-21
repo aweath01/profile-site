@@ -1,9 +1,10 @@
-const teamURL = "https://enigmatic-bastion-70371.herokuapp.com/teams-raw";
+const teamsURL  = "https://enigmatic-bastion-70371.herokuapp.com/teams-raw";
+const teamURL  = "https://enigmatic-bastion-70371.herokuapp.com/team";
 const employeeURL = "https://enigmatic-bastion-70371.herokuapp.com/employees";
 const projectsURL = "https://enigmatic-bastion-70371.herokuapp.com/projects";
 
 export function getTeamData() {
-  return fetch(teamURL)
+  return fetch(teamsURL )
     .then(response => {
       if (!response.ok) {
         throw new Error(response.statusText);
@@ -56,4 +57,17 @@ export function getProjectsData() {
     .then(projects => {
       return projects;
     });
+}
+
+export function changeTeamData(employees, projects, team){
+  debugger;
+  fetch(teamURL  +'/'+ team._id, {
+    headers: { "Content-Type": "application/json; charset=utf-8" },
+    method: 'PUT',
+    body: JSON.stringify({
+      Employees: employees,
+      Projects: projects,
+      TeamLead: team.TeamLead
+    })
+  }).then(console.log("Data Updated"));
 }

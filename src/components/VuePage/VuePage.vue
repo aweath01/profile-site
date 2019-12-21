@@ -25,7 +25,6 @@
     padding-left: 15px;
     padding-top: 15px;
     padding-right: 15px;
-    background-color: rgb(44, 44, 44);
 }
 
 @media screen and (max-width: 400px) {

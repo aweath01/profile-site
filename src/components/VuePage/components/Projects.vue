@@ -1,6 +1,6 @@
 <template>
     <div>
-        <multiselect v-model="teamProjectsTM" :options="projectsTM" track-by="value" label="text" placeholder="Change Team Projects"></multiselect>
+        <multiselect @change="handleChange()" v-model="teamProjectsTM" :options="projectsTM" track-by="value" label="text" placeholder="Change Team Projects"></multiselect>
     </div>
 </template>
 
@@ -8,7 +8,6 @@
 
 <script>
 import Multiselect from 'vue-multiselect';
-import _ from 'lodash';
 
 export default {
     name: 'Projects',
@@ -33,6 +32,10 @@ export default {
         this.projectsTM = this.projects.map(proj => {return{value: proj._id, text: proj.ProjectName}});
         this.teamProjectsTM = this.teamProjects.map(proj=>{return {value: proj._id, text: proj.ProjectName}});
 
+    },
+    
+    updated: function(){
+        this.$emit('changed', this.teamProjectsTM);
     }
 }
 </script>
