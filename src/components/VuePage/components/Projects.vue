@@ -1,6 +1,15 @@
 <template>
     <div>
-        <multiselect @change="handleChange()" v-model="teamProjectsTM" :options="projectsTM" track-by="value" label="text" placeholder="Change Team Projects"></multiselect>
+        <multiselect 
+            v-model="teamProjectsTM" 
+            :options="projectsTM" 
+            :multiple="true"
+            track-by="value" 
+            label="text" 
+            :limit="0"
+            :limit-text="limitText"
+            placeholder="Change Team Projects">
+        </multiselect>
     </div>
 </template>
 
@@ -34,8 +43,10 @@ export default {
 
     },
     
-    updated: function(){
-        this.$emit('changed', this.teamProjectsTM);
+    methods: {
+      limitText (count) {
+      return `${count} projects`
+        }
     }
 }
 </script>

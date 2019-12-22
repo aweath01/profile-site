@@ -61,13 +61,18 @@ export function getProjectsData() {
 
 export function changeTeamData(employees, projects, team){
   debugger;
-  fetch(teamURL  +'/'+ team._id, {
+  fetch(teamURL  +'/'+ team, {
     headers: { "Content-Type": "application/json; charset=utf-8" },
     method: 'PUT',
     body: JSON.stringify({
       Employees: employees,
       Projects: projects,
-      TeamLead: team.TeamLead
+      //TeamLead: team.TeamLead
     })
-  }).then(console.log("Data Updated"));
+  }).then(response => {
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+      console.log("Data Updated");
+  })
 }

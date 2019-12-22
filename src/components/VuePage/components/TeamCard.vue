@@ -78,7 +78,8 @@ export default {
                 this.mode = 'Save';
             }
             else{
-                changeTeamData(this.team.employees, this.team.projects, this.team);
+                debugger;
+                changeTeamData(this.$children["0"].$children[0].membersTM.value, this.$children[1].teamProjectsTM.value, this.$children[1]._self.team._id);
                 this.bg = this.deft.bg;
                 this.text = this.deft.text;
                 this.btn = this.deft.btn;
