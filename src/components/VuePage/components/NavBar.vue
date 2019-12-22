@@ -1,11 +1,25 @@
 <template>
-    <div>
-        <b-navbar type="dark" variant="info">
-            <b-navbar-brand>Vue.js Example - Team Details - Alexandra Weatherall 2019</b-navbar-brand>
-            <b-navbar-nav class="ml-auto">Wondering what this is? View the&nbsp;<a href="https://github.com/aweath01/profile-site/blob/master/README.md#vuejs" target="_blank" style="color: white;"> README </a></b-navbar-nav>
-        </b-navbar>
+    <div id="vueNavBar">
+        <div class="title">Vue.js - Team Details</div> 
+        <div class="info">Wondering what this is? View the<a href="https://github.com/aweath01/profile-site/blob/master/README.md#vuejs" target="_blank"> README </a></div>
     </div>
 </template>
+
+<style scoped>
+    #vueNavBar{
+        background-color: rgb(16, 141, 150);
+        padding: 10px;
+        text-align: center;
+        color: white;
+    }
+    a{
+        color:white;
+    }
+    a:hover{
+        color:black;
+        text-decoration: none;
+    }
+</style>
 
 <script>
 export default {

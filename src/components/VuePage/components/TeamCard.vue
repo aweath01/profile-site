@@ -27,7 +27,9 @@
 
 <style scoped>
 #team-card-wrapper{
-    display:inline;
+    flex: 1;
+    min-width: 275px;
+
 }
 
 .card-header{
