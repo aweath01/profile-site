@@ -15,12 +15,12 @@
                 :projects="projects"
                 :team="team"/>
             <br/>
-            <b-button 
+            <!-- <b-button 
                 block id="editB" 
-                v-on:click="modeChange()" 
+                v-on:click="modeChange()"           //still working out functionality
                 :variant="btn">
                 {{ mode }}
-            </b-button>
+            </b-button> -->
         </b-card>
     </div>
 </template>
@@ -80,8 +80,7 @@ export default {
                 this.mode = 'Save';
             }
             else{
-                debugger;
-                changeTeamData(this.$children["0"].$children[0].membersTM.value, this.$children[1].teamProjectsTM.value, this.$children[1]._self.team._id);
+                changeTeamData(this.$children[0].$children[1].membersTM, this.$children[1].teamProjectsTM, this.$children[0].thisLeader, this.$children[1]._self.team._id);
                 this.bg = this.deft.bg;
                 this.text = this.deft.text;
                 this.btn = this.deft.btn;
