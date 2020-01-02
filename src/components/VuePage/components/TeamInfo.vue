@@ -3,14 +3,18 @@
         <form>
             <label>Team Leader</label> 
             <br/>
-            <select>
-                <option v-for="employee of employees" :key="employee._id" :selected="employee._id == thisLeader[0]._id"> {{employee.FirstName}} {{employee.LastName}} </option>
-            </select>
+            <multiselect 
+                v-model="thisLeader" 
+                :options="employeesTM"
+                track-by="id" 
+                label="name" 
+                placeholder="Change Team Leader">
+            </multiselect>
             <br/><br/>
             <label>Team Members</label>
             <br/>
             <team-members 
-                :employees = "employees"
+                :employeesTM = "employeesTM"
                 :members = "thisTeam"/>
             <br/>
         </form>
@@ -23,8 +27,9 @@
 </style>
 
 <script>
-import _ from 'lodash'
+
 import TeamMembers from './TeamMembers'
+import Multiselect from 'vue-multiselect'
 
 export default {
     name: 'TeamInfo',
@@ -32,15 +37,17 @@ export default {
     data: function(){
         return{
             thisLeader: null,
-            thisTeam: []
+            thisTeam: [],
+            employeesTM: [] 
         }
     },
     components:{
-        TeamMembers
-    },  
+        TeamMembers, Multiselect
+    }, 
 
     created: function() {
 
+        //create team array
         for(var i = 0; i < this.team.Employees.length; i++){
             for(var j = 0; j < this.employees.length; j++){
                 if(this.team.Employees[i] == this.employees[j]._id){
@@ -48,8 +55,13 @@ export default {
                 }
             }
         }
-        this.thisLeader = this.employees.filter(obj => {
-            return obj._id === this.team.TeamLead;
+        
+        //map data for multiselect
+        this.employeesTM = this.employees.map((employee)=>{return{id:employee._id, name: employee.FirstName + " " + employee.LastName}});
+
+        //identify team leader
+        this.thisLeader = this.employeesTM.filter(emp => {
+            return emp.id === this.team.TeamLead;
             });
     }
 }

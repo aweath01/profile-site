@@ -21,11 +21,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     overflow: auto;
-    justify-content: space-evenly;
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-right: 15px;
-    background-color: rgb(44, 44, 44);
+    justify-content: stretch;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
 }
 
 @media screen and (max-width: 400px) {

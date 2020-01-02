@@ -1,28 +1,45 @@
 <template>
   <div>
-    <multiselect v-model="membersTM" :options="employeesTM" track-by="value" label="text" placeholder="Change Team Members"></multiselect>
+    <multiselect 
+      v-model="membersTM" 
+      :options="employeesTM" 
+      track-by="id"
+      :multiple="true" 
+      label="name" 
+      :limit="0"
+      :limit-text="limitText"
+      placeholder="Change Team Members">
+    </multiselect>
   </div>
 </template>
 
 <style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
 
 <script>
-  import Multiselect from 'vue-multiselect'
+  import Multiselect from 'vue-multiselect';
 
   export default {
     name: 'TeamMembers',
-    props: ['employees', 'members'],
+    props: ['employeesTM', 'members'],
     components: { Multiselect },
     data: function(){
         return{
             value: null,
-            employeesTM: null,
             membersTM: null
         }
     },
     created: function(){
-        this.employeesTM = this.employees.map((employee)=>{return{value:employee._id, text: employee.FirstName + " " + employee.LastName}});
-        this.membersTM = this.members.map(member=>{return{value:member._id, text: member.FirstName + " " + member.LastName}});
+        this.membersTM = this.members.map(member=>{return{id:member._id, name: member.FirstName + " " + member.LastName}});
+    },
+    
+    updated: function(){
+        this.$emit('changed', this.membersTM);
+    },
+    
+    methods: {
+      limitText (count) {
+      return `${count} members`
+      }
     }
   }
 </script>
